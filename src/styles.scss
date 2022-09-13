@@ -1,0 +1,70 @@
+// VARIABLES
+@import "variables";
+
+// ESTILOS GLOBALES
+* {
+  margin: 0rem;
+  padding: 0rem;
+  font-family: $lato;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+}
+
+*::selection {
+  background-color: $secondary;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $primary $dark;
+}
+*::-webkit-scrollbar {
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: $dark;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: $primary;
+  border-radius: 20px;
+  border: 3px solid transparent;
+}
+
+body {
+  background-color: $dark;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a {
+  color: $light
+}
+
+.section {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+
+// IMPORTACIONES PARCIALES
+@import "./components/header/Header.scss";
+@import "./components/menu/Menu.scss";
+@import "./components/login/Login.scss";
+@import "./components/registration/Registry.scss";
+@import "./components/support/Support.scss";
+@import "./components/products/Products.scss";
+@import "./components/auth/Auth.scss";
+@import "./components/loader/Loader.scss";
+@import "./components/cart/Cart.scss";
+@import "./components/orders/Orders.scss";
+@import "./components/item/Item.scss";
+
+// RESPONSIVIDAD
+@import "responsive";

@@ -1,0 +1,76 @@
+@import "../../variables.scss";
+
+.header {
+  width: 100vw;
+  backdrop-filter: blur($blur);
+  position: fixed;
+  height: 80px;
+  z-index: 20;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.674);
+  top: 0;
+}
+
+.navbar {
+  display: flex;
+  flex-flow: row nowrap;
+  width: $width;
+  height: 100%;
+  position: fixed;
+  left: 50%;
+  top: 0;
+  margin-left: calc($width / -2);
+  justify-content: space-between;
+  align-items: center;
+  z-index: 15;
+}
+
+.sections {
+  button {
+    background-color: transparent;
+    color: $light;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    svg {
+      margin-bottom: -5px;
+      margin-left: 5px;
+      font-size: 20px;
+    }
+  }
+  button:hover {
+    text-shadow: 1px 1px 20px $primary, 1px 1px 5px $secondary;
+  }
+}
+
+.logo {
+  width: 300px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -150px;
+  text-align: center;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  a {
+    color: $light;
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+.logo:hover {
+  transform: scale(1.25);
+}
+
+.icons {
+  a {
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 2px;
+  }
+  a:hover {
+    text-shadow: 1px 1px 20px $primary, 1px 1px 5px $secondary;
+  }
+}

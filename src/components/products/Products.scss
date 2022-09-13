@@ -1,0 +1,15 @@
+@import "../../variables";
+.list {
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fill, 12rem);
+    grid-template-rows: auto;
+    //width: 80vw;
+    min-height: calc(100vh - $navBarHeight);
+    //padding: 6rem 2rem 4rem 2rem;
+    margin-top: 80px;
+    align-items: center;
+    justify-content: center;
+    padding-top: $navBarHeight;
+    padding: 10vh 10vw ;
+  }

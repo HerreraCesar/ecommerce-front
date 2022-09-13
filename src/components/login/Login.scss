@@ -1,0 +1,56 @@
+@import "../../variables";
+
+.card {
+    //background-color: $secondary;
+    width: 700px;
+    height: auto;
+    margin: calc($navBarHeight * 2) 0px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: $curve;
+    padding: 50px;
+    border: solid 3px $secondary;
+    h3 {
+        font-size: 36px;
+        //margin-bottom: 20px;
+    }
+    .form {
+        width: 300px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        label {
+            margin-top: 20px;
+            height: 30px;
+            width: 100%;
+            color: $light;
+            border-radius: $curve;
+        }
+        input {
+            //height: 30px;
+            padding: 5px 10px;
+            width: 100%;
+            border-radius: $curve;
+        }
+        .button {
+            border-radius: $curve;
+            background-color: $secondary;
+            margin-top: 20px;
+            color: $light;
+            font-size: 16px;
+            font-weight: 500;
+            height: 40px;
+            cursor: pointer;
+        }
+    }
+    button {
+        margin-top: 20px;
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: $primary;
+    }
+}
