@@ -1,4 +1,4 @@
-## Ecommerce
+# Ecommerce
 
 Frontend de ecommerce realizado durante el desarrollo del curso de Programación Backend de [Coderhouse](https://www.coderhouse.com/).
 Para ver el repositorio del backend haga [clic aquí](https://github.com/HerreraCesar/ecommerce)

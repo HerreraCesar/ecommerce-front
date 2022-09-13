@@ -3,13 +3,27 @@
     display: grid;
     grid-gap: 3rem;
     grid-template-columns: repeat(auto-fill, 12rem);
-    grid-template-rows: auto;
-    //width: 80vw;
+    grid-template-rows: repeat(auto-fill, 16rem);
+    width: 80vw;
+    margin: 50px 10vw;
     min-height: calc(100vh - $navBarHeight);
     //padding: 6rem 2rem 4rem 2rem;
-    margin-top: 80px;
+    //margin-top: 80px;
     align-items: center;
-    justify-content: center;
-    padding-top: $navBarHeight;
-    padding: 10vh 10vw ;
+    justify-content: space-between;
+    //padding-top: $navBarHeight;
+    //padding: 10vh 10vw ;
+}
+
+.categories {
+  //margin-top: $navBarHeight;
+  //height: 50px;
+  display: flex;
+  flex-flow: row nowrap;
+  width: 80vw;
+  margin: calc($navBarHeight + 20px) 10vw 0;
+  gap: 20px;
+  li {
+    color: $light;
   }
+}

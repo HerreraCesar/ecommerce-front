@@ -9,6 +9,7 @@ import {
 
 import Auth from "./components/auth/Auth";
 import Cart from "./components/cart/Cart";
+import Details from "./components/details/Details";
 import Header from "./components/header/Header";
 import Orders from "./components/orders/Orders";
 import Products from "./components/products/Products";
@@ -37,6 +38,8 @@ function App() {
         <Route path="/carrito" element={<Cart />} />
         <Route path="/ordenes" element={<Orders />} />
         <Route path="/productos" element={<Products />} />
+        <Route path="productos/:category" element={<Products />} />
+        <Route path="productos/details/:id" element={<Details />} />
       </Routes>
       <ToastContainer
         position="bottom-right"

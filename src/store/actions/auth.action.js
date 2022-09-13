@@ -1,9 +1,8 @@
+import { API_URL } from "../../config";
 import { authTypes } from "../types/auth.types";
 import axios from "axios";
 import { notifyError } from "../../services/notifications";
 import { validateSession } from "../../services/session";
-
-const API_URL = "http://localhost:8080";
 
 const { SIGNUP, SIGNIN, SIGNOUT, CHECK_TOKEN } = authTypes;
 
