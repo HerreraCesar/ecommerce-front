@@ -1,0 +1,80 @@
+@import "../../variables";
+
+.cartContainer {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  justify-content: space-between;
+  padding: calc($navBarHeight + 2rem) 10vw 0;
+  gap: 2rem;
+  .cartCards {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2rem;
+    .cartCard {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: $curve;
+      border: solid $light 1px;
+
+      width: 100%;
+      .resume {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        .photo {
+          width: 5rem;
+          height: 5rem;
+          margin: 1rem;
+          border-top-left-radius: $curve;
+          border-bottom-left-radius: $curve;
+        }
+        a {
+          width: auto;
+          font-size: 2rem;
+          font-weight: 500;
+          color: $light;
+          &:hover {
+            text-decoration: underline $primary;
+          }
+        }
+        p {
+          font-size: 1.5rem;
+          font-weight: 600;
+          color: $primary;
+        }
+      }
+    }
+    .delete {
+      font-size: 2rem;
+      color: $light;
+      padding: 1rem;
+      margin-right: 2rem;
+      cursor: pointer;
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+  .total {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    .amount {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .buttons {
+      .button {
+        width: 14rem;
+        margin: 2rem 1rem;
+        &:hover {
+          background-color: $primary;
+        }
+      }
+    }
+  }
+}

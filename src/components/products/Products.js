@@ -12,35 +12,34 @@ const Products = () => {
   const { category } = useParams();
   const [products, setProducts] = useState([]);
   const [categories, setCategories] = useState([]);
-  const [isLoading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(true);
   const user = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   useEffect(() => {
-    setLoading(true);
+    console.log(user);
     dispatch(validate());
     if (user.validated === true) {
-      const categories = []
+      const categories = [];
       productsService.getProducts(user.token, category).then(
         (response) => {
           setProducts(response.data);
-          response.data.forEach( product => {
+          response.data.forEach((product) => {
             if (!categories.includes(product.category)) {
-              categories.push(product.category)
+              categories.push(product.category);
             }
           });
-          setCategories(categories)
+          setCategories(categories);
           setLoading(false);
         },
         (error) => {
           console.log(error);
         }
       );
-      
     } else {
       notifyInfo("Para acceder a esta sección debe iniciar sesión");
     }
-  }, [dispatch, category]);
-  
+  }, [category]);
+
   return (
     <div>
       {user.validated === true ? (
@@ -49,10 +48,15 @@ const Products = () => {
         ) : (
           <div>
             <ul className="categories">
-            {categories.map((category) => (
-                <Link to={`/productos/${category.toLowerCase()}`}>/ {category}</Link>
+              {categories.map((category) => (
+                <Link
+                  to={`/productos/${category.toLowerCase()}`}
+                  key={category}
+                >
+                  / {category}
+                </Link>
               ))}
-              <Link to={'/productos'}>/ Volver</Link>
+              <Link to={"/productos"}>/ Volver</Link>
             </ul>
             <div className="list">
               {products.map((product) => (

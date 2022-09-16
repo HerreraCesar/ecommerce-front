@@ -4,7 +4,7 @@ import axios from "axios";
 import { notifyError } from "../../services/notifications";
 import { validateSession } from "../../services/session";
 
-const { SIGNUP, SIGNIN, SIGNOUT, CHECK_TOKEN } = authTypes;
+const { SIGNUP, SIGNIN, SIGNOUT, CHECK_TOKEN, CHANGE_CART } = authTypes;
 
 export const signup = (email, password, username, phone, setLoading) => {
   return async (dispatch) => {
@@ -89,6 +89,22 @@ export const validate = () => {
       dispatch({
         type: CHECK_TOKEN,
         validated: response,
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  };
+};
+
+export const changeCart = (user, token) => {
+  return async (dispatch) => {
+    console.log(user);
+    const newUser = { ...user, token };
+    try {
+      localStorage.setItem("user", JSON.stringify(newUser));
+      dispatch({
+        type: CHANGE_CART,
+        cart: user.cart,
       });
     } catch (error) {
       console.log(error);

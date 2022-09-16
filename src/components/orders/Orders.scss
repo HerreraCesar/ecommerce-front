@@ -1,0 +1,16 @@
+.firstBuy {
+  margin-top: 200px;
+  width: 80vw;
+  margin: calc($navBarHeight + 50px) 10vw;
+  h4 {
+    margin-top: 10px;
+    margin-bottom: 1rem;
+    color: $placeholder;
+    a {
+      color: $light;
+    }
+  }
+  span {
+    color: $primary;
+  }
+}

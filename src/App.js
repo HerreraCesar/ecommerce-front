@@ -9,6 +9,7 @@ import {
 
 import Auth from "./components/auth/Auth";
 import Cart from "./components/cart/Cart";
+import Checkout from "./components/checkout/Checkout";
 import Details from "./components/details/Details";
 import Header from "./components/header/Header";
 import Orders from "./components/orders/Orders";
@@ -18,7 +19,7 @@ import { ToastContainer } from "react-toastify";
 import { useSelector } from "react-redux";
 
 function App() {
-  const user = useSelector((state) => state.auth.validated);
+  const user = useSelector((state) => state.auth);
   return (
     <Router>
       <Header />
@@ -26,7 +27,7 @@ function App() {
         <Route
           path="/"
           element={
-            user === true ? (
+            user.validated === true ? (
               <Navigate to="/productos" />
             ) : (
               <Navigate to="/autenticacion" />
@@ -36,10 +37,11 @@ function App() {
         <Route path="/autenticacion" element={<Auth />} />
         <Route path="/soporte" element={<Support />} />
         <Route path="/carrito" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
         <Route path="/ordenes" element={<Orders />} />
         <Route path="/productos" element={<Products />} />
-        <Route path="productos/:category" element={<Products />} />
-        <Route path="productos/details/:id" element={<Details />} />
+        <Route path="/productos/:category" element={<Products />} />
+        <Route path="/productos/detalles/:id" element={<Details />} />
       </Routes>
       <ToastContainer
         position="bottom-right"

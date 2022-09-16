@@ -2,7 +2,7 @@ import { notifyInfo, notifySuccess } from "../../services/notifications";
 
 import { authTypes } from "../types/auth.types";
 
-const { SIGNUP, SIGNIN, SIGNOUT, CHECK_TOKEN } = authTypes;
+const { SIGNUP, SIGNIN, SIGNOUT, CHECK_TOKEN, CHANGE_CART } = authTypes;
 const existingUser = JSON.parse(localStorage.getItem("user"));
 let initialState;
 if (existingUser) {
@@ -63,6 +63,11 @@ const authReducer = (state = initialState, action) => {
       return {
         ...state,
         validated: action.validated,
+      };
+    case CHANGE_CART:
+      return {
+        ...state,
+        cart: action.cart,
       };
     default:
       return state;

@@ -13,8 +13,8 @@ const Login = ({ handleSection }) => {
     e.preventDefault();
     try {
       dispatch(signin(email, password));
-    } catch (err) {
-      console.log(err);
+    } catch (error) {
+      console.log(error);
     }
   };
 

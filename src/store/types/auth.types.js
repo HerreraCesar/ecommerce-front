@@ -3,4 +3,5 @@ export const authTypes = {
   SIGNIN: "SIGNIN",
   SIGNOUT: "SIGNOUT",
   CHECK_TOKEN: "CHECK_TOKEN",
+  CHANGE_CART: "CHANGE_CART",
 };

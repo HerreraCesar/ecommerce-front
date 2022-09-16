@@ -37,8 +37,16 @@ body {
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4, h5, h6, p, span, a {
-  color: $light
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a {
+  color: $light;
 }
 
 .section {
@@ -52,7 +60,6 @@ h1, h2, h3, h4, h5, h6, p, span, a {
   overflow: hidden;
 }
 
-
 // IMPORTACIONES PARCIALES
 @import "./components/header/Header.scss";
 @import "./components/menu/Menu.scss";
@@ -65,6 +72,8 @@ h1, h2, h3, h4, h5, h6, p, span, a {
 @import "./components/cart/Cart.scss";
 @import "./components/orders/Orders.scss";
 @import "./components/item/Item.scss";
+@import "./components/details/Details.scss";
+@import "./components/checkout/Checkout.scss";
 
 // RESPONSIVIDAD
 @import "responsive";
