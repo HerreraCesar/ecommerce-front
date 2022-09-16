@@ -6,7 +6,7 @@
   grid-template-rows: repeat(auto-fill, 16rem);
   width: 80vw;
   margin: 50px 10vw;
-  min-height: calc(100vh - $navBarHeight);
+  //min-height: fit-content;
   align-items: center;
   justify-content: space-between;
 }

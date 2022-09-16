@@ -65,15 +65,16 @@ const Details = () => {
         <div className="data">
           <div>
             <h2 className="name">{product.title}</h2>
-            <span className="price">$ {product.price}</span>
+            <h3 className="price">$ {product.price}</h3>
+            <h4 className="description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam non adipisci eius accusamus corrupti pariatur quia amet tenetur quis quam. Repellat quaerat blanditiis vel laborum qui culpa perferendis numquam possimus.</h4>
           </div>
           {added ? (
             <div>
-              <p className="noStock">Producto en carrito</p>
+              <p className="state">Producto en carrito</p>
               <div className="buttonsContainer">
-                <Link to="/carrito">
-                  <button className="button">Ir al carrito</button>
-                </Link>
+                
+                  <button className="button"><Link to="/carrito">Ir al carrito</Link></button>
+                
                 <button
                   className="button"
                   onClick={() => window.history.back()}

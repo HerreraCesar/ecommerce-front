@@ -10,7 +10,42 @@
       color: $light;
     }
   }
-  span {
+  /* span {
     color: $primary;
+  } */
+}
+
+.ordersList {
+  width: 80vw;
+  margin: calc($navBarHeight + 50px) 10vw 50px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+  .data {
+    width: 100%;
+    border: solid $light 1px;
+    border-radius: $curve;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    gap: 2rem;
+    justify-content: space-between;
+    div {
+      display: flex;
+    align-items: center;
+    gap: 2rem;
+      h4 {
+        font-weight: 500;
+      }
+      h3 {
+        font-weight: 300;
+        
+      }    }
+    h3 {
+      font-weight: 300;
+      strong {
+        margin-left: 10px;
+      }
+    }
   }
 }

@@ -59,6 +59,23 @@ a {
   align-items: center;
   overflow: hidden;
 }
+.button {
+  width: 100%;
+  border-radius: $curve;
+  background-color: $secondary;
+  margin-top: 20px;
+  color: $light;
+  font-size: 16px;
+  font-weight: 500;
+  height: 40px;
+  cursor: pointer;
+}
+.buttonsContainer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 1rem;
+}
 
 // IMPORTACIONES PARCIALES
 @import "./components/header/Header.scss";

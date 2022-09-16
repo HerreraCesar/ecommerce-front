@@ -16,7 +16,6 @@ const Products = () => {
   const user = useSelector((state) => state.auth);
   const dispatch = useDispatch();
   useEffect(() => {
-    console.log(user);
     dispatch(validate());
     if (user.validated === true) {
       const categories = [];

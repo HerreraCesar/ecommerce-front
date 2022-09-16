@@ -37,7 +37,7 @@ function App() {
         <Route path="/autenticacion" element={<Auth />} />
         <Route path="/soporte" element={<Support />} />
         <Route path="/carrito" element={<Cart />} />
-        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/resumen" element={<Checkout />} />
         <Route path="/ordenes" element={<Orders />} />
         <Route path="/productos" element={<Products />} />
         <Route path="/productos/:category" element={<Products />} />

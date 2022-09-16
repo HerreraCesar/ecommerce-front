@@ -87,7 +87,7 @@ const Cart = () => {
                   Vaciar carrito
                 </button>
                 <button className="button">
-                  <Link to="/checkout">Terminar compra</Link>
+                  <Link to="/resumen">Terminar compra</Link>
                 </button>
               </div>
             </div>

@@ -25,6 +25,7 @@ const Orders = () => {
           console.log(error);
         }
       );
+      
     } else {
       notifyInfo("Para acceder a esta sección debe iniciar sesión");
     }
@@ -43,9 +44,18 @@ const Orders = () => {
             </h4>
           </div>
         ) : (
-          <div className="list">
+          <div className="ordersList">
             {orders.map((order) => (
-              <h1>{order.id}</h1>
+              <div className="data" key={order.id}>
+                <div>
+                <h4>{new Date(order.timestamp).toLocaleString('es-AR')}</h4>
+                <h3># {order.id}</h3>
+                <h4>Productos: {order.cart[0].products.length}</h4>
+                </div>
+                
+              <h3>TOTAL: <strong>${order.cart[0].total}</strong></h3>
+              
+              </div>
             ))}
           </div>
         )

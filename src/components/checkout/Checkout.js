@@ -21,6 +21,8 @@ const Checkout = () => {
     } else {
       notifyInfo("Para acceder a esta sección debe iniciar sesión");
     }
+    console.log(cart);
+    console.log(user);
   }, []);
   const confirmOrder = async (e) => {
     e.preventDefault();
@@ -47,7 +49,7 @@ const Checkout = () => {
           <div className="firstBuy">
             <h2>Se ha registrado correctamente su pedido</h2>
             <h4>
-              Su número de órden es #<span>{orderData.id}</span>
+              Su número de órden es # <span>{orderData.id}</span>
             </h4>
             <h4>
               Para ver los detalles de sus compras haga
@@ -63,52 +65,45 @@ const Checkout = () => {
         ) : cart.products.length === 0 ? (
           <Navigate to="/ordenes" />
         ) : (
-          <form>
-            <h2>Checkout</h2>
-            <input
-              onChange={""}
-              type="text"
-              name="name"
-              required
-              placeholder="nombre"
-            ></input>
-            <input
-              onChange={""}
-              type="tel"
-              name="phone"
-              required
-              placeholder="teléfono"
-            ></input>
-            <input
-              onChange={""}
-              type="email"
-              name="email"
-              required
-              placeholder="correo electrónico"
-            ></input>
-            <input
-              onChange={""}
-              type="email"
-              name="emailVerification"
-              required
-              placeholder="confirme correo electrónico"
-            ></input>
-            <button
-              type="submit"
-              className="button"
-              /* disabled={
-                data.name === "" ||
-                data.phone === "" ||
-                data.email === "" ||
-                data.email !== data.emailVerification
-                  ? true
-                  : false
-              } */
-              onClick={confirmOrder}
-            >
-              Comprar
-            </button>
-          </form>
+          <div className="resume">
+            <h2>Revisa tu compra</h2>
+            <div className="sections">
+              <div>
+                <h3>Datos del comprador:</h3>
+                <p>
+                  Nombre: <strong>{user.username}</strong>
+                </p>
+                <p>
+                  Correo electrónico: <strong>{user.email}</strong>
+                </p>
+                <p>
+                  Teléfono: <strong>+54 (3469) 000000</strong>
+                </p>
+              </div>
+              <div>
+                <h3>Datos del carrito:</h3>
+                <p>Total: <strong>${cart.total}</strong></p>
+                <p>Productos en el carrito: <strong>{cart.products.length}</strong></p>
+                <p>Detalle:</p>
+                {cart.products.map((product) => (
+                  <div className="productDetail">
+                    <p>1 x </p>
+                    <p>{product.title}</p>
+                    <p>${product.price}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="buttonsContainer">
+              <button className="button">
+                <Link to={"/carrito"}>Volver</Link>
+              </button>
+              <button className="button" onClick={confirmOrder}>
+                Confirmar compra
+              </button>
+            </div>
+          </div>
         )}
       </div>
     )
