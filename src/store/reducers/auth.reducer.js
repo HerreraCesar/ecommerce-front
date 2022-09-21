@@ -56,7 +56,7 @@ const authReducer = (state = initialState, action) => {
     case SIGNOUT:
       notifyInfo(`Hasta luego ${state.username}`);
       return {
-        initialState,
+        ...initialState,
         validated: action.validated,
       };
     case CHECK_TOKEN:

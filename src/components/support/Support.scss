@@ -1,0 +1,47 @@
+@import "../../variables";
+
+.chat {
+  margin-top: $navBarHeight;
+  height: calc(100vh - $navBarHeight);
+  padding: 50px 10vw;
+  .messages {
+    width: 100%;
+    height: calc(100vh - $navBarHeight - 100px - 200px);
+    overflow-y: scroll;
+    margin-top: 1rem;
+    .placeholder {
+      color: $placeholder;
+    }
+    div {
+      display: flex;
+      flex-flow: row nowrap;
+      align-content: center;
+      gap: 0.5rem;
+      span {
+        color: $placeholder;
+      }
+    }
+  }
+  .newMessage {
+    div {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: baseline;
+      gap: 1rem;
+      label {
+        margin-top: 1rem;
+        color: $light;
+        font-size: 1.2rem;
+      }
+      input {
+        color: $light;
+        width: 100%;
+        outline: none;
+        padding: 5px;
+        background-color: transparent;
+        border: none;
+        border-bottom: solid 2px $placeholder;
+      }
+    }
+  }
+}

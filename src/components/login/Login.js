@@ -22,7 +22,7 @@ const Login = ({ handleSection }) => {
     <Navigate to="/" />
   ) : (
     <div className="card">
-      <h3>Login de usuario</h3>
+      <h3>Acceso de usuario</h3>
       <form onSubmit={handleLogin} className="form">
         <label>Ingrese su email:</label>
         <input

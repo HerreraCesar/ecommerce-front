@@ -8,12 +8,11 @@ import ordersService from "../../services/orders";
 import { validate } from "../../store/actions/auth.action";
 
 const Orders = () => {
-  const [orders, setOrders] = useState([]);
-  const user = useSelector((state) => state.auth);
-  const [isLoading, setLoading] = useState(false);
   const dispatch = useDispatch();
+  const user = useSelector((state) => state.auth);
+  const [orders, setOrders] = useState([]);
+  const [isLoading, setLoading] = useState(true);
   useEffect(() => {
-    setLoading(true);
     dispatch(validate());
     if (user.validated === true) {
       ordersService.getOrders(user.token, user.email).then(
@@ -25,11 +24,10 @@ const Orders = () => {
           console.log(error);
         }
       );
-      
     } else {
       notifyInfo("Para acceder a esta sección debe iniciar sesión");
     }
-  }, [dispatch]);
+  }, []);
   return (
     <div>
       {user.validated ? (
@@ -48,13 +46,14 @@ const Orders = () => {
             {orders.map((order) => (
               <div className="data" key={order.id}>
                 <div>
-                <h4>{new Date(order.timestamp).toLocaleString('es-AR')}</h4>
-                <h3># {order.id}</h3>
-                <h4>Productos: {order.cart[0].products.length}</h4>
+                  <h4>{new Date(order.timestamp).toLocaleString("es-AR")}</h4>
+                  <h3># {order.id}</h3>
+                  <h4>Productos: {order.cart[0].products.length}</h4>
                 </div>
-                
-              <h3>TOTAL: <strong>${order.cart[0].total}</strong></h3>
-              
+
+                <h3>
+                  TOTAL: <strong>${order.cart[0].total}</strong>
+                </h3>
               </div>
             ))}
           </div>
