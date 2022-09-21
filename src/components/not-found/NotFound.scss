@@ -1,0 +1,36 @@
+@import "../../variables";
+
+.notFound {
+  margin-top: $navBarHeight;
+  height: calc(100vh - $navBarHeight);
+  padding: 50px 10vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  .gif {
+    border-radius: $curve;
+    width: 25rem;
+  }
+  .container {
+    width: 30rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    h2 {
+      font-weight: 400;
+    }
+    p {
+      font-weight: 300;
+    }
+    div {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 1rem;
+      width: 100%;
+    }
+  }
+}

@@ -23,6 +23,7 @@ const Support = () => {
       notifyInfo("Para acceder a esta sección debe iniciar sesión");
     }
   }, []);
+
   useEffect(() => {
     socket.on("messages", (data) => {
       setMessages(data);
@@ -87,7 +88,6 @@ const Support = () => {
                   autoFocus
                 />
               </div>
-
               <input type="submit" className="button" value="Enviar" />
             </form>
           </div>

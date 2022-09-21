@@ -1,3 +1,5 @@
+@import "../../variables";
+
 .firstBuy {
   margin-top: 200px;
   width: 80vw;
@@ -10,9 +12,6 @@
       color: $light;
     }
   }
-  /* span {
-    color: $primary;
-  } */
 }
 
 .ordersList {
@@ -32,15 +31,15 @@
     justify-content: space-between;
     div {
       display: flex;
-    align-items: center;
-    gap: 2rem;
+      align-items: center;
+      gap: 2rem;
       h4 {
         font-weight: 500;
       }
       h3 {
         font-weight: 300;
-        
-      }    }
+      }
+    }
     h3 {
       font-weight: 300;
       strong {
