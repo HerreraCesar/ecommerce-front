@@ -19,11 +19,11 @@ Para ver el repositorio del backend haga [clic aquí](https://github.com/Herrera
 
 ## Demo Frontend <a name="2"></a>
 
-Conocé el frontend de la app en funcionamiento haciendo [clic aquí](https://eccomerce-mitienda.netlify.app/).
+Conocé el frontend de la app en funcionamiento haciendo [clic aquí](https://ecommerce-mitienda.netlify.app/).
 
 ## Demo Backend <a name="3"></a>
 
-Conocé el backend de la app en funcionamiento haciendo [clic aquí](https://eccomerce-mitienda.herokuapp.com/).
+Conocé el backend de la app en funcionamiento haciendo [clic aquí](https://ecommerce-mitienda.herokuapp.com/).
 
 ## Dependencias: <a name="4"></a>
 
