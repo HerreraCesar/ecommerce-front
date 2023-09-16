@@ -1,1 +1,1 @@
-export const API_URL = "https://ecommerce-mitienda.herokuapp.com"
+export const API_URL = "https://ecommerce-back-stail.vercel.app";
